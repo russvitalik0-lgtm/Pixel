@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 98vw;
+    box-shadow: 0 10px 10px 0;
+    color: gray;
+    padding: 10px 15px
+}
+
+header h3 {
+    color: blueviolet;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header a {
+    color: rgb(53, 53, 53);
+    text-decoration: none;
+    padding: 3px;
+}
+header a:hover {
+    color: rgb(0, 0, 0);
+    border-bottom: 1.5px solid black;
+}
+
+header svg {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 8px;
+}
+header svg:hover {
+    border-radius: 4px;
+    box-shadow: 0 0 14px 4px blueviolet
+}
+
+#cover {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vw;
+}
+
+#cover img {
+    user-select: none;
+}
+
+#left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 45%;
+}
+
+#left h1 {
+    font-size: 3em;
+}
+
+#left span {
+    color: blueviolet;
+}
+
+#leftbutton {
+    background-color: blueviolet;
+    border-color: blueviolet;
+    color: white;
+    padding: 10px 20px;
+}
+
+#rightbutton {
+    padding: 10px 20px;
+
+}
