@@ -6,25 +6,25 @@
     </head>
     <body>
         <header>
-            <h3>PIXL</h3>
+            <h3><a>PIXL</a></h3>
             <div>
                 <a href="pixel.html">Открыть Редактор</a>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun text-primary" data-fg-d3bl13="0.8:1.23470:/src/app/App.tsx:267:23:8579:42:e:Sun::::::BFa" data-fgid-d3bl13=":r6:"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
+                <img src="src/DarkMode.svg">
             </div>
         </header>
         <main>
             <section id="cover">
                 <div id="left">
                     <h1>Pixel art,<br><span>crafted</span><br>one cell<br>at a time.</h1>
-                    <p>PIXL — это браузерный пиксельный редактор, созданный для художников, которым важна сетка. Никакой регистрации, никакого облака — только вы, редактируемый холст и полный творческий контроль.</p>
-                    <div>
-                        <button id="leftbutton">Открыть Редактор →</button>
+                    <p id="description">PIXL — это браузерный пиксельный редактор, созданный для художников, которым важна сетка. Никакой регистрации, никакого облака — только вы, редактируемый холст и полный творческий контроль.</p>
+                    <div id="buttons">
+                        <button id="leftbutton" onclick="window.location.href='pixel.html';">Открыть Редактор →</button>
                         <button id="rightbutton">Узнать больше <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down" data-fg-d3bl43="0.8:1.23470:/src/app/App.tsx:328:30:11648:25:e:ChevronDown::::::Ddn3" data-fgid-d3bl43=":r1d4:"><path d="m6 9 6 6 6-6"></path></svg></button>
                     </div>
                 </div>
                 <div>
                     <img src="src/image.png" draggable="false">
-                    <p>сделано с помощью PIXL</p>
+                    <p id="caption">сделано с помощью PIXL</p>
                 </div>
             </section>
             <section id="features">

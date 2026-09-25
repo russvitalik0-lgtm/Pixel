@@ -1,3 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --font-size: 16px;
+  --background: #f8f7ff;
+  --foreground: #1a1025;
+  --card: #ffffff;
+  --card-foreground: #1a1025;
+  --popover: #ffffff;
+  --popover-foreground: #1a1025;
+  --primary: #7c3aed;
+  --primary-foreground: #ffffff;
+  --secondary: #ede9fe;
+  --secondary-foreground: #4c1d95;
+  --muted: #f0eefb;
+  --muted-foreground: #b9afcc;
+  --accent: #7c3aed;
+  --accent-foreground: #ffffff;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(124, 58, 237, 0.15);
+  --input: transparent;
+  --input-background: #f0eefb;
+  --switch-background: #c4b5fd;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #7c3aed;
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(90.365% 0.0001 271.152);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: #110d1e;
+  --foreground: #f0ebff;
+  --card: #1c1630;
+  --card-foreground: #f0ebff;
+  --popover: #1c1630;
+  --popover-foreground: #f0ebff;
+  --primary: #a78bfa;
+  --primary-foreground: #1a1025;
+  --secondary: #2d1f4e;
+  --secondary-foreground: #ddd6fe;
+  --muted: #231a3a;
+  --muted-foreground: #9d8fc0;
+  --accent: #a78bfa;
+  --accent-foreground: #1a1025;
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: rgba(167, 139, 250, 0.2);
+  --input: oklch(0.269 0 0);
+  --ring: #a78bfa;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
 * {
     margin: 0;
 }
@@ -8,6 +89,8 @@ body {
     flex-direction: column;
     align-items: center;
     user-select: none;
+    font-family: "PT Sans", sans-serif;
+    background-color: var(--background);
 }
 
 header {
@@ -16,13 +99,14 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 98vw;
-    box-shadow: 0 10px 10px 0;
-    color: gray;
+    box-shadow: 0 10px 10px 0 var(--muted-foreground);
+    color: var(--border);
     padding: 10px 15px
 }
 
-header h3 {
-    color: blueviolet;
+header h3 a {
+    color: var(--primary);
+    font-family: "Press Start 2P", system-ui;
 }
 
 header div {
@@ -41,6 +125,11 @@ header a:hover {
     border-bottom: 1.5px solid black;
 }
 
+header h3 a:hover {
+    color: var(--primary);
+    border: none;
+}
+
 header svg {
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -48,7 +137,7 @@ header svg {
 }
 header svg:hover {
     border-radius: 4px;
-    box-shadow: 0 0 14px 4px blueviolet
+    box-shadow: 0 0 14px 4px var(--primary)
 }
 
 #cover {
@@ -56,10 +145,27 @@ header svg:hover {
     justify-content: space-around;
     align-items: center;
     width: 80vw;
+    height: 85vh;
+}
+#cover h1 {
+    font-family: "Press Start 2P", system-ui;
+    line-height: 60px;
+}
+#description {
+    color: rgb(80, 80, 80);
+    font-size: 20px
 }
 
 #cover img {
     user-select: none;
+    height: 80%;
+}
+
+#caption {
+    color: rgb(170, 170, 170);
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
 }
 
 #left {
@@ -74,17 +180,52 @@ header svg:hover {
 }
 
 #left span {
-    color: blueviolet;
+    color: var(--primary);
 }
 
 #leftbutton {
-    background-color: blueviolet;
-    border-color: blueviolet;
+    background-color: var(--primary);
+    border-color: var(--primary);
     color: white;
     padding: 10px 20px;
+    box-shadow: 4px 3px 0 0 rgb(174, 116, 230);
+    font-family: "PT Sans", sans-serif;
 }
 
 #rightbutton {
     padding: 10px 20px;
+    border-color: lightgray;
+    font-family: "PT Sans", sans-serif;
+}
 
+#buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.grid {
+    background-color: var(--sidebar);
+    width: 70vw;
+    height: 40vw;
+    display: grid;
+    border: 0.7px solid black;
+}
+
+.pixel {
+    border: 0.5px solid var(--sidebar-border);
+}
+
+.pixel:hover {
+    opacity: 0.7;
+    background-color: var(--sidebar-ring);
+}
+
+.drawing-panel {
+    display: flex;
+    height: 95vh;
+    align-items: center;
+}
+
+.tools {
+    
 }
