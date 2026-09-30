@@ -9,31 +9,46 @@
             <h3><a href="index.html">PIXL</a></a></h3>
             <div>
                 <div>
-                    <img src="src/Draw.svg">
-                    <img src="src/Eraser.svg">
-                    <img src="src/Fill.svg">
+                    <img src="src/Draw.svg" id="Draw">
+                    <img src="src/Eraser.svg" id="Eraser">
+                    <img src="src/Fill.svg" id="Fill"> 
                     <hr>
                 </div>
                 <div>
-                    <img src="src/GridOn.svg">
-                    <img src="src/Undo.svg">
-                    <img src="src/Delete.svg">
-                    <img src="src/Download.svg">
-                    <img src="src/Save.svg">
+                    <img src="src/GridOn.svg" id="GridOn">
+                    <img src="src/Undo.svg" id="Undo">
+                    <img src="src/Delete.svg" id="Delete">
+                    <img src="src/Download.svg" id="Download">
+                    <img src="src/Save.svg" id="Save">
                     <hr>
                 </div>
                 <div>
-                    <img src="src/DarkMode.svg">
+                    <img src="src/DarkMode.svg" id="Theme">
                 </div>
             </div>
         </header>
         <main class="drawing-panel">
             <div>
-                <!-- Инструменты -->
-                <section class="tools"></section>
                 <!-- Сетка -->
                 <section class="grid"></section>
             </div>
+            <!-- Палитра -->
+            <section class="sidebar">
+                <article>
+                    <h2>Цвет</h2>
+                    <p><input type="color" id="colorpicker" value="#7c3aed"></p>
+                </article>
+                <article>
+                    <h2>Палитра</h2>
+                    <div>
+
+                    </div>
+                </article>
+                <article>
+                    <button><img src="src/Download.svg">Импорт</button>
+                    <button><img src="src/Delete.svg">Очистка</button>
+                </article>
+            </section>
         </main>
         <footer>
             

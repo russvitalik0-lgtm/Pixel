@@ -226,6 +226,9 @@ header svg:hover {
     align-items: center;
 }
 
-.tools {
-    
+.sidebar {
+    width: 20%;
+    background-color: var(--sidebar);
+    display: flex;
+    flex-direction: column;
 }
