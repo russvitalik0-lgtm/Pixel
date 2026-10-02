@@ -232,3 +232,18 @@ header svg:hover {
     display: flex;
     flex-direction: column;
 }
+
+.tools img {
+    border: 0.5px solid var(--muted-foreground);
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--secondary);
+}
+#GridOn {
+    background-color: var(--primary);
+
+}
+
+.tools img:active {
+    background-color: var(--primary);
+}
