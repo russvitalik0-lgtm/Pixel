@@ -4,6 +4,7 @@ let PENDOWN = false
 let EQUIPPED = false
 let GRIDOFF = true
 let cur_tool = 0
+let spisok = []
 
 // Импорты
 let grid = document.querySelector('.grid')
@@ -16,6 +17,7 @@ let trashcan = document.querySelector('#Delete')
 let download = document.querySelector('#Download')
 let save = document.querySelector('#Save')
 let colorpicker = document.querySelector('#colorpicker')
+let palette = document.querySelector('.palette')
 
 let color = '#7c3aed'
 let basecolor = '#ede9fe'
@@ -37,7 +39,27 @@ for (let tool of tools) {
     })
 }
 
-colorpicker.addEventListener('input', (e) => { color = e.target.value}, false);
+colorpicker.addEventListener('change', (e) => { 
+    color = e.target.value
+    if (spisok.length < 49) {
+        let pixel = document.createElement('div')
+        pixel.classList.add('palette-color')
+        pixel.style.backgroundColor = color
+        palette.appendChild(pixel)
+        spisok.push(pixel)
+    }
+    else {
+        pixel = spisok[0]
+        spisok.splice(0, 1)
+        palette.removeChild(pixel)
+
+        pixel = document.createElement('div')
+        pixel.classList.add('palette-color')
+        pixel.style.backgroundColor = color
+        palette.appendChild(pixel)
+        spisok.push(pixel)
+    }
+}, false);
 eraser.addEventListener('click', function() { color = grid.style.backgroundColor })
 draw.addEventListener('click', function() { color = colorpicker.value })
 

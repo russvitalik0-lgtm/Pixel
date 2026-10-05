@@ -247,3 +247,19 @@ header svg:hover {
 .tools img:active {
     background-color: var(--primary);
 }
+
+.palette {
+    display: grid;
+    border: #1c1630 2px solid;
+    border-radius: 4px;
+    padding: 7px;
+    height: 240px;
+    width: 270px;
+    gap: 7px;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+}
+.palette-color {
+    border: rgb(0, 0, 0) 1px solid;
+    border-radius: 4px;
+}
