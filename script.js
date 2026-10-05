@@ -130,6 +130,8 @@ function savecolors () {
 }
 save.addEventListener('click', savecolors)
 
+setInterval(savecolors, 30000);
+
 function loadcolors () {
     let pixels = document.querySelectorAll('.pixel')
     let colors = localStorage.getItem('colors')
